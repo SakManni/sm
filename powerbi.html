@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Dataportfolio</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Aloitussivu</a></li>
+							<li><a href="sql.html">SQL-projektit</a></li>
+							<li><a href="powerbi.html">Power Bi -projektit</a></li>
+							
+							
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Power Bi-Projekti: Pizzerian liiketoiminnan seuraaminen</h1>
+							
+							<p>Tämän projektin tarkoituksena on analysoida kuvitteellisen pizzerian liiketoimintaa. Analyysin kohteena on keskeiset liiketoiminnan osa-alueet ja tunnuslukujen selvittäminen, kuten myynti, ruuhkapiikit ja mahdolliset liiketoiminnan pullonkaulat. Analyysin pohjana olivat seuraavat kysymykset:</p>
+							<ul>
+								<li>	Kuinka monta asiakasta meillä on joka päivä? Onko olemassa päivittäisiä asiakaspiikkejä?</li>
+								
+								<li>	Kuinka monta pizzaa tilauksessa yleensä on? Onko meillä mitään myyntihittejä?</li>
+								
+								<li>	Kuinka paljon rahaa teimme tänä vuonna? Voimmeko tunnistaa myynnissä jonkinlaista kausivaihtelua?</li>
+								
+								<li>	Onko joitain pizzoja, jotka olisi hyvä poistaa valikoimasta, tai mitä tahansa tarjouksia, joita voisimme hyödyntää?</li>
+							</ul>
+
+							<p>Analyysissa käytettiin lähdetiedostona neljää CSV-tiedostoa (Free Data Sets & Dataset Samples | Maven Analytics), joita analysoitiin Power BI:ssä. Analyysi kävi läpi kolme perusvaihetta: Power queryssä suoritettu taulujen/datan käsittely analyysia varten, taulujen yhteyksien läpikäynti/tarkastaminen ja varsinainen analyysi ja tulosten visualisointi.</p>    
+								
+							<p>Projektin keskeiset osaamistavoitteet ja taidot:</p> 
+								
+								<p>#power query (datan siistiminen, sarakkeiden määrittely segmentointia varten)</p>
+								<p>#taulujen yhteyksien määrittely</p>
+								<p># analyysi ja visualisointi</p>
+								<p># mittarit</p>
+							
+							<p>Projektin tarkoituksena oli luonnollisesti vastata projektin kannalta olellisiin kysymyksiin.
+								Päivittäisiä tilauspiikkejä (tilaukset tunneittain) varten loin Power queryn avulla erillisen luokittelevan sarakkeen, jonka avulla sain jaettua vuorokauden tunnit eri segmentteihin.
+								Myyntiä varten käytin SUM (kk-myynti) ja SUMX-funktiota (Pizzat, myynnin mukaan) luodakseni mittarin kokonaismyynnin laskemiseksi.
+								Muutoin projektin toteuttaminen onnistui taulukoinneilla, pylväsdiagrammi- ja viivadiagrammivisualisoinneilla.</p>
+							<p><a href="https://github.com/SakManni/dataportfolio/blob/959354792df68f00aabdb59daac0aad6987c7c51/Pizzaprojekti.pbix">Power Bi -tiedosto täältä</a>.</p>
+							<span class="image main"><img src="images/pizzeria.png" alt="" /></span>
+							
+							<p>Analyysin tulokset:</p>
+							<p>1.	Ensimmäiseen kysymykseen vastasin luomalla taulukon, josta käy ilmi päivittäiset myynnit kuukausittain. Päivittäiset ruuhkapiikit sijoittuvat selkeästi lounasaikaan klo 12-14 välille sekä klo 16-20 väliselle ajalle, joilloin ihmiset pääsevät töistä ja haluavat jotain nopeaa ja hyvää päivälliseksi.</p>
+							<p>2.	Keskimäärin asiakas tilaa noin 2,3 pizzaa per tilaus. Tilausten perusteella useammat tilaukset kuitenkin sisältävät yhden pitsan, kun taas tietty osa kaksi, ja toisinaan jopa kolme-neljä pitsaa per tilaus, mikä hilaa tilauskeskiarvoa ylöspäin. Myyntihitit valikoimassa ovat selkeästi ’TheBig Meat Pizza’, jota on myyty vuoden aikana 1914 kappaletta. Seuraavina myydyimpien joukossa ovat ’The Thai Chicken Pizza' ja ’The Five Cheese Pizza’, joita myydään 1410 ja 1409 kappaletta. Samalla kaksi viimeisintä pizzaa ovat ravintolan tuottoisimpia myyntivaltteja. Huomioitavaa on myös se, että asiakkaat suosivat L-koon pitsoja myynnin mukaan tarkastellessa. Ainoa poikkeus on ’TheBig Meat Pizza’, jota ostetaan s-koossa.</p>
+							<p>3.	Pitsoista kertynyt myynnillinen tuotto oli vuoden aikana 817 860 $, tilauksia tehtiin 21350, ja pitsoja tilattiin 49574 kappaletta. Myynnillistä kausivaihtelua seuratessa näemme pienoista kasvua heinäkuussa (tilauksia 1935) sekä tammi-, maalis- ja toukokuussa (noin 1850 tilausta per kk). Varsinaisia myyntipiikkejä on havaittavissa heinäkuun 3-4.pvänä, jolloin juhlitaan itsenäisyyspäivää (pitseria on amerikkalainen, otaksun siis). Muita piikkejä on helmikuun 1.pvä, toukokuun 15.pvä, lokakuun 15. ja marraskuun 27.pvä.</p>
+							<p>4.	Heikoiten myyvä pizza on kreikkalainen xxl-pitsa, jonka myynti jää selvästi parhaista jälkeen. Huomioitavaa tässäkin on pitsojen koko, ne ovat xxl/s-kokoa. Kuten huomasimme, asiakkaat suosivat l-koon pitsoja. Tämän ja muiden huonoimmin myyvien pitsojen suhteen voikin miettiä, onko niitä tärkeää pitää listalla vai olisiko syytä markkinoida niitä enemmän esimerkiksi kampanjan turvin.</p> 
+									
+								
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							
+							<section>
+								<h2>Github</h2>
+								<ul class="icons">
+									
+									<li><a href="https://github.com/SakManni/dataportfolio.git" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
