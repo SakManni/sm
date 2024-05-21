@@ -50,7 +50,48 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Power Bi-Projekti: Pizzerian liiketoiminnan seuraaminen</h1>
+							<H1>PowerBi-projektit:</H1>
+
+							<h2>Apocalypse Preppers</h2>
+							<p>Projektissa luodaan PowerBi-raportti, jossa seurataan kuvitteellisten varustekauppojen myyntiä.</p>
+							<p>Projektissa opitaan keskeisesti:</p>
+							<ul>
+								<li>CSV-tiedoston normalisointi Power queryssä (fakta-taulun siivoaminen, dimensio-taulujen luonti)</li>
+								<li>Taulujen välisten yhteyksien luominen</li>
+								<li>Tiedon analyysi, jossa keskeistä tarvittavien mittareiden (DAX) ja visualisointien luonti</li>
+								<li>Projektin dynaamisen dashboardin luominen (linkkinapit, sivujen filtteröinti kk-tasolla)</li>
+
+							</ul>
+
+							<H2>Pizzerian myyntiseuranta</H2>
+
+							<p>Projektissa seurataan kuvitteellisen pizzerian myyntiä.</p>
+
+							<p>Projektin keskeiset osaamistavoitteet ja taidot:</p> 
+								
+								<ul>
+								<li>Power query (datan siistiminen, sarakkeiden määrittely segmentointia varten)</li>
+								<li>Taulujen yhteyksien määrittely</li>
+								<li>Analyysi ja visualisointi (mittarit & dashboard)</li>
+								</ul>
+
+							<H1>PowerBi-projekti: Apocalypse Preppers</H1>
+							<p>Projektin lähtökohta oli luoda dashboard, joka kattaa kolmen kuukauden myynnin kolmelle eri välilehdelle jaettuna. Lisäksi pyrkimyksenäni oli perehtyä tarkemmin CSV-tiedoston normalisointiin ja tarvittavien yhteyksien luomiseen taulujen välillä.</p>
+							<p>Analyysin lähtökohtana on CSV-tiedosto, joka sisältää kuvitteellista dataa eräiden varustekauppojen myynnistä 3kk aikavälillä. Lähdin liikeelle Power Querystä, jossa tein perustoimenpiteet modifoimalla dataa, kuten tarkastamalla ja muokkaammalla sarakkeiden sisältämän datan analyysiin soveltuvaksi. 
+								Alkuvaiheen jälkeen suoritin fakta-taululle normalisoinnin jakamalla dataa osittain dimensiotauluiksi. Loin asiakastaulun, jolle loin faktatauluun ID-sarakkeen.</p> 
+								<p></p>
+								<span class="image main"><img src="images/pptaulut.png" alt="" /></span>
+								<p>Loin kuvassa näkyvän date-taulun tukemaan analyyseja. Loin tauluun DAX:llä sarakkeet kuukauden ja päivän määrittelemiseksi, joita voidaan nyt hakea kirjainlyhenteen tai numeron mukaan. Lopuksi yhdistin tietomallin taulut kaksisuuntaisen yhteyden kautta faktataulua hyödyntäen, jolloin pystyin luomaan dynaamisia visualisointinäkymiä.</p>
+								<span class="image main"><img src="images/Powerprepperdate_1.png" alt="" /></span>
+								<p>Varsinainen dashboard-päänäkymä sisältää myynnin, tuoton ja voiton mittarit. Vasemmalle laidalle loin navigointinapit, joiden avulla pääset siirtymään eri välehdillä. Varsinaiset visualisoinnit havainnollistavat tuoton ja voiton suhdetta, myös tuotteittain. Alempana yksikkömyynti kaupoittain sekä päiväkohtaiset myynnit.</p>
+								<span class="image main"><img src="images/Powerprepper_1.png" alt="" /></span>
+								<p>Alla vielä esimerkki tammikuun myynneistä. Lisäsin sivulle oman filtterin, joka suodatti myynnit valitun kuukauden mukaan. Toteutin samanlaisen näkymän jokaiselle kuukaudelle. Näkymässä on mahdollista tarkastella dynaamista suodatusta esimerkiksi halutun tarvikemyyjän mukaan mikä mahdollistuu taulujen välisten kaksisuuntaisten yhteyksien kautta.</p>
+								<span class="image main"><img src="images/Powerprepper_2.png" alt="" /></span>
+							
+							
+							
+							
+							<h1>PowerBi-Projekti: Pizzerian liiketoiminnan seuraaminen</h1>
 							
 							<p>Tämän projektin tarkoituksena on analysoida kuvitteellisen pizzerian liiketoimintaa. Analyysin kohteena on keskeiset liiketoiminnan osa-alueet ja tunnuslukujen selvittäminen, kuten myynti, ruuhkapiikit ja mahdolliset liiketoiminnan pullonkaulat. Analyysin pohjana olivat seuraavat kysymykset:</p>
 							<ul>
@@ -63,20 +104,16 @@
 								<li>	Onko joitain pizzoja, jotka olisi hyvä poistaa valikoimasta, tai mitä tahansa tarjouksia, joita voisimme hyödyntää?</li>
 							</ul>
 
-							<p>Analyysissa käytettiin lähdetiedostona neljää CSV-tiedostoa (Free Data Sets & Dataset Samples | Maven Analytics), joita analysoitiin Power BI:ssä. Analyysi kävi läpi kolme perusvaihetta: Power queryssä suoritettu taulujen/datan käsittely analyysia varten, taulujen yhteyksien läpikäynti/tarkastaminen ja varsinainen analyysi ja tulosten visualisointi.</p>    
-								
-							<p>Projektin keskeiset osaamistavoitteet ja taidot:</p> 
-								
-								<p>#power query (datan siistiminen, sarakkeiden määrittely segmentointia varten)</p>
-								<p>#taulujen yhteyksien määrittely</p>
-								<p># analyysi ja visualisointi</p>
-								<p># mittarit</p>
+							<p>Analyysissa käytettiin lähdetiedostona neljää CSV-tiedostoa (Free Data Sets & Dataset Samples | Maven Analytics), joita analysoitiin Power BI:ssä. Analyysi kävi läpi kolme perusvaihetta: Power queryssä suoritettu taulujen/datan käsittely analyysia varten, taulujen yhteyksien läpikäynti/tarkastaminen ja varsinainen analyysi ja tulosten visualisointi.</p>  
+							
 							
 							<p>Projektin tarkoituksena oli luonnollisesti vastata projektin kannalta olellisiin kysymyksiin.
 								Päivittäisiä tilauspiikkejä (tilaukset tunneittain) varten loin Power queryn avulla erillisen luokittelevan sarakkeen, jonka avulla sain jaettua vuorokauden tunnit eri segmentteihin.
 								Myyntiä varten käytin SUM (kk-myynti) ja SUMX-funktiota (Pizzat, myynnin mukaan) luodakseni mittarin kokonaismyynnin laskemiseksi.
 								Muutoin projektin toteuttaminen onnistui taulukoinneilla, pylväsdiagrammi- ja viivadiagrammivisualisoinneilla.</p>
 							<p><a href="https://github.com/SakManni/dataportfolio/blob/959354792df68f00aabdb59daac0aad6987c7c51/Pizzaprojekti.pbix">Power Bi -tiedosto täältä</a>.</p>
+				
+							
 							<span class="image main"><img src="images/pizzeria.png" alt="" /></span>
 							
 							<p>Analyysin tulokset:</p>
