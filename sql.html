@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Dataportfolio</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Aloitussivu</a></li>
+							<li><a href="python.html">Python-projektit</a></li>
+							<li><a href="sql.html">SQL-Projektit</a></li>
+							<li><a href="powerbi.html">Power Bi-Projektit</a></li>
+							
+							
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							
+								<p>Tällä sivulla esittelen muutamia SQL-projektejani. 
+								Tämän hetken projektit ovat:</p>
+							
+								<p><b>1. Koronatilastot.</b> Tässä projektissa käyn läpi Suomen, Euroopan ja maailman korotilastoja. Taitoja, joita tässä projektissa opin olivat keskeisesti</p>
+									<ul><li>tarkasteleva analyysi</li>
+									<li>Excel (datan siivoaminen)</li>
+									<li>SQL (CTE, Join, ikkuna-ja aggregaatti-funktiot)</li>
+									<li>MySQL</li>
+									<li>Power Bi (datan visualisointi)</li>
+									<li>Python (Pandas)</li>
+									<li>Visual Studio Code</li> </li></ul>
+								<p><b>2. Big5-persoonallisuuspiirteiden tarkastelu.</b> Aineiston suuruus kattaa noin reilu 19000 henkilöä vuodelta 2012, jotka tekivät big5-nettitestin.</p>
+								Projektin oppimistavoite painottui
+								<ul><li>SQL-alakyselyiden harjoittelemiseen ja soveltamiseen</li>
+									<li>CASE-lausekkeiden soveltamiseen muun muassa osana alakyselyitä </li>
+
+								</ul>
+								
+								
+								<h1>1. Koronatilastot</h1>
+							
+							<p><b>  </b></p>
+								<p>Projekti koostuu kolmesta eri alaprojektista:</p>
+								<ul><li>Suomen koronatilastot (<a href="https://github.com/SakManni/dataportfolio/blob/34b81ca5a6cccaa6344e5a8002a41233de058a85/Suomen_koronatilastot_SQL">Github-koodi täältä</a>)</li>
+									<li>Euroopan koronatilastot (<a href="https://github.com/SakManni/dataportfolio/blob/34b81ca5a6cccaa6344e5a8002a41233de058a85/Euroopan_koronatilastot_SQL">Github-koodi täältä</a>)</li>
+									<li>Maailman koronatilastot (<a href="https://github.com/SakManni/dataportfolio/blob/34b81ca5a6cccaa6344e5a8002a41233de058a85/maailman_koronatilastot_SQL">Github-koodi täältä</a>)</li></ul>
+								<p>Projektidokumentti rakentuu projektijohdannosta, jossa esitellään projektin lähtökohdat ja esittelee sen jälkeen kunkin projektin tulokset erikseen.</p>
+								<p>Kaikki projektin toteutuksessa käytetyt SQL-haut löytyvät <a href="https://github.com/SakManni/dataportfolio.git">Github-sivultani</a>.</p>
+								<p>Projektin lähtökohtana oli tutkia SQL:n avulla Our World In Data -sivuston (Coronavirus Pandemic (COVID-19) - Our World in Data) tarjoamaa dataa (csv-tiedosto) koronasta vuosien 2020 (tammikuu) - 2023 (syyskuu) ajalta. Sivustolla on mahdollista tarkastella dataa maailmanlaajuisesti, tai rajata sitä maanosien tai halutun kohdemaan mukaan, joista voi myös ladata itselleen tiedoston. Kaikki sivuston tarjoama data käsittää sivuston mukaan muun muassa</p>
+								
+								<p>1)	tapaukset: Kuinka monta uutta tapausta vahvistetaan päivittäin? Kuinka monta tapausta on vahvistettu pandemian alusta lähtien? Miten tapausten määrä muuttuu?</p>
+								<p>2)	Kuolemat: Kuinka monta COVID-19:ään liittyvää kuolemaa on raportoitu? Onko kuolemien määrä nouseva vai laskeva? Miten kuolleisuus vertautuu muihin maihin?</p>
+								<p>3)	Rokotukset: Kuinka monta rokoteannosta annetaan päivittäin? Kuinka monta annosta on annettu yhteensä? Mikä osuus väestöstä on rokotettu?</p>
+								<p>4)	Testaus: Kuinka paljon maat tekevät koronavirustestejä? Kuinka monta testiä maa tekee löytääkseen yhden COVID-19-tapauksen?</p>
+								
+								<p>Projektin lähtökohtana oli tarkastella ensin maailmanlaajuisia tilastoja, joka kuitenkin laajeni kolmeksi eri alaprojektiksi. Maailman korona-datan lisäksi, käsittelen myös Suomen ja Euroopan korona-tilastoja. Tiedoston suuruuden takia (noin 344000 riviä) päätin tapauskohtaisesti lähtökohtaisesti rajata tiettyjä osa-alueita pois tarkastelusta ja keskittää analyysi kohtien 1-3 tarkasteluun.</p> 
+								
+								<p><b>Datan alustava muokkaaminen analyysia varten</b></p>
+								<p>Poistin ensin Excelissä lähdetiedostosta ylimääräisiä, analyysin kannalta tarpeettomia sarakkeita. Suodatin lisäksi Suomen ja Euroopan korona-analyysiä varten tiedostosta myös tarpeettomia rivejä (maita ja niihin liittyviä tietoja) pois. Lopuksi muokkasin tietosarakkeita oikeaan numeeriseen muotoon, kuten päivämääriä, tai tekstimuotoisia numeerista dataa sisältäviä sarakkeita. Koska kyseessä on SQL-projekti, jätin osan datan muokkauksesta sql-hakujen yhteyteen (null-arvojen huomiointi).
+								Käytin analyysissa MySQL:ää, johon latasin muokatun CSV-tiedoston Pythonia käyttäen Visual Studio Codea. (<a href="https://github.com/SakManni/dataportfolio/blob/a227a3b6c13af2ab3d962ec67823ced69f1ae9ec/python_import_to_SQL_tiedosto">Python-Tiedosto</a>)</p>
+								
+								<br>
+								<p><b><H3>Alaprojekti 1: Suomen koronatilastoja</H3></b></p>
+								<p>Suomen tilastoissa tuon esiin tapaukset, kuolemat, rokotukset, rokotetut ja miten niiden trendit kehittyivät 2020-2023 välisenä ajanjaksona. Lisäksi lisäsin analyysiin ja raporttiin mukaan vertailun vuoksi myös dataa pohjoismaiden tapauksista ja kuolemista ja niiden suhteellisista osuuksista. (<a href="https://github.com/SakManni/dataportfolio/blob/a227a3b6c13af2ab3d962ec67823ced69f1ae9ec/Suomen_koronatilastot_SQL">SQL-haut Githubissa</a>)</p>
+								
+								<span class="image main"><img src="images/Suomi_korona.png" alt="" /></span>
+								<p>Tulokset:</p>
+								<p>1.	Suomessa on 2020-2023 (syyskuu) välisenä aikana virallisia tartuntoja noin 1,5 miljoonaa. Huippu tartunnoissa havaitaan vuoden 2022 aikana ja siirtyen edelleen 2023 puolelle. Luultavammin tämä johtuu höllentyneistä korona-rajoituksista. </p>
+								<p>2.	Tartunnoista kuolemaan johti 10201 tapausta, jotka vastaavat 0,69% osuuttaa tapauksista ja  0,07% osuutta väestöstä. Kuolemien trendi seuraa tartuntahuippuja vuoden 2022-2023 aikana jakautuen alkuvuoden ja loppuvuoden 2022 huippuihin ja vuoden 2023 jo alhaisempiin kuolemiin. </p>
+								<p>3.	Rokotettuja tilastojen mukaan olisi ollut 4,5 miljoonaa, joista täysin rokotettuja hivenen vähemmän, noin 4,3 miljoonaa. Suurin huippu rokotuksille on vuoden 2021 aikana jolloin rokotukset käynnistyivät. </p>
+								<p>4.	Pohjoismaiden välisessä vertailussa Suomi sijoittuu kuolemien suhteellisen osuuden mukaan katsoen sijalle 2 Ruotsin jälkeen. Vaikka varsinaisia syitä tähän ei pysty varmaksi sanomaa tässä kohtaa, niin spekuloiden voi todeta ainakin maiden väkiluvun olevan yksi havaittavissa oleva tekijä. </p> 
+								
+								<p><b><H3>Alaprojekti 2: Euroopan koronatilastot</H3></b></p>
+
+								<p>Euroopan tilastoissa nostan esiin tapaukset, kuolemat, rokotukset, rokotetut ja miten niiden trendit kehittyivät 2020-2023 välisenä ajanjaksona. <a href="https://github.com/SakManni/dataportfolio/blob/a227a3b6c13af2ab3d962ec67823ced69f1ae9ec/Euroopan_koronatilastot_SQL">SQL-haut</a>></p>
+								
+								<span class="image main"><img src="images/Eurooppa_korona.png" alt="" /></span>
+								<p>Tulokset Euroopan korona-analyysista:</p>
+								<p>1.	Tapauksia esiintyi vuoden 2020-2023 aikavälillä noin 250 miljoonaa. Suurin huippu todetuissa tapauksissa sijoittuu vuoden 2022 ajalle, 156 miljoonaa.</p>
+								<p>2.	Kuolemia Euroopassa on analyysin mukaan tilastoitu reilu 2 miljoonaa. Suurin osa näistä sijoittuu analyysin mukaan 2020-2021 ajalle. Suurimmat lukemat löytyvät Englannista (230 tuhatta), Ranskasta (168 tuhatta), Ukrainasta (109 tuhatta), Italiasta (191 tuhatta), Puolasta (119 tuhatta) ja Venäjältä (400 tuhatta). Vastaavasti esimerkiksi Suomessa kuolemat jäävät 10 200 kpl:ään. Kuolemien suhteellinen osuus väestöstä on analyysin mukaan Bulgariassa (0,57%, Bosnia-Herzegovinassa (0,51%) ja Unkarissa (0,47%).</p>
+								<p>3.	Rokotuksia Euroopassa on annettu tilastojen mukaan 1,27 miljardia, mikä on paljon, mutta jos määrä suhteutetaan rokotettuihin, 577 miljoonaa, on luku jo lähellä uskottavaa. Tähän sisältyy myös oletus kahdesta buustista.</p>
+								<p>4.	Rokotettujen ja täysin rokotettujen välinen ero vaikuttaisi pysyvän maittain, joskin tässä kohden eroa ei suhteellisesti tarkennetakaan.</p>  
+									 
+								<p><b><H3>Alaprojekti 3: Maailman koronatilastot</H3></b></p>	
+								<p>Maailman koronatilastoissa nostan esiin tapaukset, kuolemat, rokotukset, rokotetut ja miten niiden trendit kehittyivät 2020-2023 välisenä ajanjaksona.<a href="https://github.com/SakManni/dataportfolio/blob/a227a3b6c13af2ab3d962ec67823ced69f1ae9ec/maailman_koronatilastot_SQL">SQl-haut</a></p>
+								
+								<span class="image main"><img src="images/Maailma_korona.png" alt="" /></span>
+								<p>Tuloksia maailman korona-analyysista:</p>
+								<p>1.	Tapauksia maailmanlaajuisesti olisi syyskuuhun 2023 mennessä kerääntynyt 770 miljoonaa. Määrällisesti eniten tapaksia on Aasiassa, mikä johtuu selkeästi suuremmasta väestön  määrästä. Toiseksi eniten Pohjois-Amerikassa ja edelleen Euroopassa.</p>
+								<p>2.	Kaikkiaan koronakuolemia tilastoitiin maailmanlaajuisesti 6,96 miljoonaa. Kuolemien suhteelliset osuudet suhteessa väestöön ovat suurimmat Etelä-Amerikassa (1,36m / 0,15%), sen jälkeen Euroopassa(reilu 2m / 0,14%) ja Pohjois-Amerikassa(1,6m / 0,08%). Kuolemien huiput vaikuttaisivat ajoittuvan Euroopassa ja Pohjois-Amerikassa vuoden 2020 kevään puolelle ja etenkin vuoden 2021 alkuun. Vastaavasti Aasiassa ja Etelä-Amerikassa huippu kuolemissa saavutetaan vasta kevään ja kesän 2021 aikana.</p> 
+								<p>3.	Maailmanlaajuiset rokotusmäärät kipuavat 14 miljardiin. Rokotettujen määrä yltää 5,6 miljardiin, joista 5,1 miljardia on täysin rokotettuja. Rokotettujen määrä on korkein luonnollisesti Asiassa, jonka kohdalla nähdään myös huipukkuutta heinäkuun 2021 ja tammikuun 2022 aikana. Muiden maan osien määrät jäävät selvästi pienimmäksi absoluuttisia määriä katsoessa.</p>  
+							
+								<br><br>
+								<h1>2. Big5-persoonallisuuspiirteiden tarkastelua</h1>
+							<p></p>
+								<p>Projektin tarkoitus on tutkia Big5-aineistoa ja selvittää persoonallisuuspiirteiden jakautumista otoksessa (+19000 hlöä). 
+									</p>
+
+									<p> Projektin kaikki SQL-haut löytyvät <a href="https://github.com/SakManni/dataportfolio/blob/ec3b86024171088169523a03fab47439130edb84/big5">GITHUB-sivustolta</a>.</p>
+									<p>Aineisto on peräisin Kaggle-sivustolta. Otos on kerätty alunperin vuodelta 2012 netissä täytettävän big5-testin avulla, jonka pystyy tekemään käytännössä kuka tahansa. Kysymyksiä arvioitiin viisiportaisella likert-asteikolla, jossa 1=Eri mieltä, 3=Neutraali, 5=Samaa mieltä (0=jäänyt vastaamatta). Kaikki esitettiin yhdellä sivulla seuraavassa järjestyksessä: E1, N2, A1, C1, O1, E2. 
+										<p>Esimerkkejä ekstroversiota mittaavista kysymyksistä:</p>
+
+										<p>E1 Olen juhlien keskipiste.</p>
+										<p>E2 En puhu paljon.</p>
+										<p>E3 Tunnen oloni mukavaksi ihmisten seurassa.</p>
+										<p>E4 Pysyttelen taustalla.</p>
+										<p>E5 Aloitan keskusteluja.</p>
+										<p>E6 Minulla on vähän sanottavaa.</p>
+										<p>E7 Puhun monille eri ihmisille juhlissa.</p>
+										<p>E8 En pidä huomion keskipisteenä olemisesta.</p>
+										<p>E9 En pane pahakseni olla huomion keskipisteenä.</p>
+										<p>E10 Olen hiljainen tuntemattomien seurassa.</p>
+										
+								
+										
+										Seuraavalla sivulla kerättiin seuraavat tiedot:
+										
+										
+										Ikä annettu tekstinä (engnat) (alle 13-vuotiaiden tietoja ei tallennettu).
+										Sijainti ilmoitettu maatunnuksena.
+										 
+										Sukupuoli valittu alasvetovalikosta. 1=Mies, 2=Nainen, 3=Muu (0=jäänyt vastaamatta)
+										 </p>
+								
+
+									<p><b>DEMOGRAFISET TAUSTATIEDOT</b></p>
+<p><b>Sukupuolijakauma:</b></p>
+<p>Jakauma on naisvoittoinen, noin 12000, miehiä noin 7600, muut noin 120.  
+
+<p>SELECT</p>
+<p>    CASE when gender = 1  then 'male'</p>
+<p>    WHEN gender = 2 then 'female'</p>
+<p>    WHEN gender = 3 then 'other'</p>
+<p>    ELSE 'unknown'</p>
+<p>    END as gender, count(*)</p>
+<p>FROM bigfive</p>
+<p>GROUP BY gender;</p>
+
+<p><b>Otoskoko maittain</b></p>
+<p> Kärkimaat otoksessa ovat Yhdysvallat (8753 hlöä), Englanti (1531), Indonesia (1464), Australia (974) ja Canada(924). Loput maat kymmenen parhaan joukossa 200-600 hlön paikkeilla ja loput jäävät muutamiin kymmeniin.
+
+<p>SELECT country, count(*) as country_count</p>
+<p>FROM bigfive</p>
+<p>GROUP BY country;</p>
+
+<p><b>PIIRTEIDEN TARKASTELUA AINEISTOSSA</p></b>
+
+<p><b>Keskimääräiset luonteenpiirteiden pisteet</b></p>
+<p>e1-e10: ekstroverio, n1-n10: neuroottisuus, a1-a10: sovinnollisuus, c1-c10: tunnollisuus, ja o1-o10:avoimuus uusille kokemuksille.</p>
+<p>Alla lasketaan yhteen luonteenpiirteitä kuvaavat pisteet. Erotus johtuu haluttua luonteenpiirrettä negatiivisesti peilaavasta kysymyksen asettelusta (eli sellaisenaan pisteytys mittaa vastakohtaa), joten tästä johtuen vähennetään täysistä pisteistä annettu vastauspistemäärä.</b></p>
+
+<p> Tulosjakauma painottuu selkeästi avoimuuden ja sovinnollisuuden hyväksi:
+	<span class="image main"><img src="images/big5piirteet.png" alt="" /></span>
+
+<p>    AVG((e1+(6-e2)+e3+(6-e4)+e5+(6-e6)+e7+(6-e8)+e9+(6-e10))/10) as extroversion,</p>
+<p>    AVG((n1+(6-n2)+n3+(6-n4)+n5+(6-n6)+n7+(6-n8)+n9+(6-n10))/10) as neuroticism,</p>
+<p>    AVG((a1+(6-a2)+a3+(6-a4)+a5+(6-a6)+a7+(6-a8)+a9+(6-a10))/10) as agreeableness,</p>
+<p>    AVG((c1+(6-c2)+c3+(6-c4)+c5+(6-c6)+c7+(6-c8)+c9+(6-c10))/10) as conscientiousness,</p>
+<p>    AVG((o1+(6-o2)+o3+(6-o4)+o5+(6-o6)+o7+(6-o8)+o9+(6-o10))/10) as openness</p>
+<p>FROM bigfive;</p>
+ 
+
+<p><b>Ikäryhmät ja sukupuolijakauma</b></p>
+
+<p>Tutkittaessa sukupuolijakauman kautta, havaitaan, naisten olevan miehiä neuroottisempia, sovinnollisempia, tunnollisempia ja ekstrovertimpia. Vastaavasti miehet ovat naisia avoimempia, introvertimpia ja selvästi vähemmän sovinnollisempia.
+	Mielenkiintoista on, että sukupuolen ollessa "muu", introversiossa ja avoimuudessa näkyy selvä piikki, joka on ilmoitettuja miehiä ja naisia suurempaa, ja vastaavasti ekstroversio ja tunnollisuus huomattavasti alhaisempaa. Neuroottisuus pysyy naisten tasolla.</p>
+	<span class="image main"><img src="images/big5sukupuoli.png" alt="" /></span>
+	<p>Alla on SQL-haku, jossa yhdistetään sukupuoli ikäryhmiin. Tulosten mukaan piirteissä näkyy vaihtelua ikäryhmien välillä. Yleisesti neuroottisuus laskee iän myötä, etenkin naisilla. Myös sovinnollisuus ja tunnollisuus korostuvat yleisesti.</p>
+</p>
+<p>Ikäluokat sukupuolittain:</p>
+<span class="image main"><img src="images/big5sukuikaeka.png" alt="" /></span>
+<span class="image main"><img src="images/big5sukuikatoka.png" alt="" /></span>
+
+<p>SELECT</p>
+<p>    age_brackets, gender,</p>
+<p>    AVG((e1+(6-e2)+e3+(6-e4)+e5+(6-e6)+e7+(6-e8)+e9+(6-e10))/10) as extroversion,</p>
+<p>    AVG((n1+(6-n2)+n3+(6-n4)+n5+(6-n6)+n7+(6-n8)+n9+(6-n10))/10) as neuroticism,</p>
+<p>    AVG((a1+(6-a2)+a3+(6-a4)+a5+(6-a6)+a7+(6-a8)+a9+(6-a10))/10) as agreeableness,</p>
+<p>    AVG((c1+(6-c2)+c3+(6-c4)+c5+(6-c6)+c7+(6-c8)+c9+(6-c10))/10) as conscientiousness,</p>
+<p>    AVG((o1+(6-o2)+o3+(6-o4)+o5+(6-o6)+o7+(6-o8)+o9+(6-o10))/10) as openness</p>
+<p>FROM (</p>
+<p>    SELECT</p>
+<p>        CASE</p>
+<p>            WHEN age <= 14 THEN '-14-years'</p>
+<p>            WHEN age >= 15 AND age <= 19 THEN '15-19-years'</p>
+<p>            WHEN age >=20 AND age <=24 THEN '20-24-years'</p>
+<p>            WHEN age >=25 AND age <=29 THEN '25-29-years'</p>
+<p>            WHEN age >=30 AND age <=34 THEN '30-34-years'</p>
+<p>            WHEN age >=35 AND age <=39 THEN '35-39-years'</p>
+<p>            WHEN age >=40 AND age <=44 THEN '40-44-years'</p>
+<p>            WHEN age >=45 AND age <=49 THEN '45-49-years'</p>
+<p>            WHEN age >=50 AND age <=54 THEN '50-54-years'</p>
+<p>            WHEN age >=55 AND age <=59 THEN '55-59-years'</p>
+<p>            WHEN age >=60 AND age <=64 THEN '60-64-years'</p>
+<p>            WHEN age >=65 AND age <=69 THEN '65-69-years'</p>
+<p>            WHEN age >=70 AND age <=79 THEN '70-79-years'</p>
+<p>            ELSE 'over 80-years'</p>
+<p>        END AS age_brackets,</p>
+<p>        CASE when gender = 1  then 'male'</p>
+<p>        WHEN gender = 2 then 'female'</p>
+<p>        WHEN gender = 3 then 'other'</p>
+<p>        ELSE 'unknown'</p>
+<p>        END as gender,</p>
+<p>        e1, e2, e3, e4, e5, e6, e7, e8, e9, e10,</p>
+<p>        n1, n2, n3, n4, n5, n6, n7, n8, n9, n10,</p>
+<p>        a1, a2, a3, a4, a5, a6, a7, a8, a9, a10,</p>
+<p>        c1, c2, c3, c4, c5, c6, c7, c8, c9, c10,</p>
+<p>        o1, o2, o3, o4, o5, o6, o7, o8, o9, o10</p>
+<p>    FROM bigfive</p>
+<p>) AS bf</p>
+<p>GROUP BY age_brackets, gender</p>
+<p>ORDER BY age_brackets ASC;</p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							
+							<section>
+								<h2>Github</h2>
+								<ul class="icons">
+									
+									<li><a href="https://github.com/SakManni/dataportfolio.git" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
