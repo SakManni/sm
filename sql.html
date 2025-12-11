@@ -53,6 +53,8 @@
 						<div class="inner">
 							
 								<p>Tällä sivulla esittelen muutamia SQL-projektejani. 
+
+								<p>Kaikista tällä sivulla esitellyistä projekteista löytyy alkuperäiset kooditiedostot <a href="https://github.com/SakManni/dataportfolio/blob/34b81ca5a6cccaa6344e5a8002a41233de058a85/Suomen_koronatilastot_SQL">TÄSTÄ (Github)</a></p>
 								Tämän hetken projektit ovat:</p>
 							
 								<p><b>Koronatilastot.</b> Tässä projektissa käyn läpi Suomen, Euroopan ja maailman korotilastoja. Taitoja, joita tässä projektissa opin olivat keskeisesti</p>
@@ -70,11 +72,11 @@
 							
 							<p><b>  </b></p>
 								<p>Projekti koostuu kolmesta eri alaprojektista:</p>
-								<ul><li>Suomen koronatilastot (<a href="https://github.com/SakManni/dataportfolio/blob/34b81ca5a6cccaa6344e5a8002a41233de058a85/Suomen_koronatilastot_SQL">Github-koodi täältä</a>)</li>
-									<li>Euroopan koronatilastot (<a href="https://github.com/SakManni/dataportfolio/blob/34b81ca5a6cccaa6344e5a8002a41233de058a85/Euroopan_koronatilastot_SQL">Github-koodi täältä</a>)</li>
-									<li>Maailman koronatilastot (<a href="https://github.com/SakManni/dataportfolio/blob/34b81ca5a6cccaa6344e5a8002a41233de058a85/maailman_koronatilastot_SQL">Github-koodi täältä</a>)</li></ul>
+								<ul><li>Suomen koronatilastot 
+									<li>Euroopan koronatilastot 
+									<li>Maailman koronatilastot 
 								<p>Projektidokumentti rakentuu projektijohdannosta, jossa esitellään projektin lähtökohdat ja esittelee sen jälkeen kunkin projektin tulokset erikseen.</p>
-								<p>Kaikki projektin toteutuksessa käytetyt SQL-haut löytyvät <a href="https://github.com/SakManni/dataportfolio.git">Github-sivultani</a>.</p>
+								<p>Projektin toteutuksessa käytetyt SQL-haut löytyvät <a href="https://github.com/SakManni/dataportfolio.git">Github-sivultani</a>.</p>
 								<p>Projektin lähtökohtana oli tutkia SQL:n avulla Our World In Data -sivuston (Coronavirus Pandemic (COVID-19) - Our World in Data) tarjoamaa dataa (csv-tiedosto) koronasta vuosien 2020 (tammikuu) - 2023 (syyskuu) ajalta. Sivustolla on mahdollista tarkastella dataa maailmanlaajuisesti, tai rajata sitä maanosien tai halutun kohdemaan mukaan, joista voi myös ladata itselleen tiedoston. Kaikki sivuston tarjoama data käsittää sivuston mukaan muun muassa</p>
 								
 								<p>1)	tapaukset: Kuinka monta uutta tapausta vahvistetaan päivittäin? Kuinka monta tapausta on vahvistettu pandemian alusta lähtien? Miten tapausten määrä muuttuu?</p>
@@ -86,7 +88,7 @@
 								
 								<p><b>Datan alustava muokkaaminen analyysia varten</b></p>
 								<p>Poistin ensin Excelissä lähdetiedostosta ylimääräisiä, analyysin kannalta tarpeettomia sarakkeita. Suodatin lisäksi Suomen ja Euroopan korona-analyysiä varten tiedostosta myös tarpeettomia rivejä (maita ja niihin liittyviä tietoja) pois. Lopuksi muokkasin tietosarakkeita oikeaan numeeriseen muotoon, kuten päivämääriä, tai tekstimuotoisia numeerista dataa sisältäviä sarakkeita. Koska kyseessä on SQL-projekti, jätin osan datan muokkauksesta sql-hakujen yhteyteen (null-arvojen huomiointi).
-								Käytin analyysissa MySQL:ää, johon latasin muokatun CSV-tiedoston Pythonia käyttäen Visual Studio Codea. (<a href="https://github.com/SakManni/dataportfolio/blob/a227a3b6c13af2ab3d962ec67823ced69f1ae9ec/python_import_to_SQL_tiedosto">Python-Tiedosto</a>)</p>
+								Käytin analyysissa MySQL:ää, johon latasin muokatun CSV-tiedoston Pythonia käyttäen Visual Studio Codea.</p>
 								
 								<br>
 								<p><b><H3>Alaprojekti 1: Suomen koronatilastoja</H3></b></p>
@@ -101,7 +103,7 @@
 								
 								<p><b><H3>Alaprojekti 2: Euroopan koronatilastot</H3></b></p>
 
-								<p>Euroopan tilastoissa nostan esiin tapaukset, kuolemat, rokotukset, rokotetut ja miten niiden trendit kehittyivät 2020-2023 välisenä ajanjaksona. <a href="https://github.com/SakManni/dataportfolio/blob/a227a3b6c13af2ab3d962ec67823ced69f1ae9ec/Euroopan_koronatilastot_SQL">SQL-haut</a>></p>
+								<p>Euroopan tilastoissa nostan esiin tapaukset, kuolemat, rokotukset, rokotetut ja miten niiden trendit kehittyivät 2020-2023 välisenä ajanjaksona. </p>
 								
 								<span class="image main"><img src="images/Eurooppa_korona.png" alt="" /></span>
 								<p>Tulokset Euroopan korona-analyysista:</p>
@@ -111,7 +113,7 @@
 								<p>4.	Rokotettujen ja täysin rokotettujen välinen ero vaikuttaisi pysyvän maittain, joskin tässä kohden eroa ei suhteellisesti tarkennetakaan.</p>  
 									 
 								<p><b><H3>Alaprojekti 3: Maailman koronatilastot</H3></b></p>	
-								<p>Maailman koronatilastoissa nostan esiin tapaukset, kuolemat, rokotukset, rokotetut ja miten niiden trendit kehittyivät 2020-2023 välisenä ajanjaksona.<a href="https://github.com/SakManni/dataportfolio/blob/a227a3b6c13af2ab3d962ec67823ced69f1ae9ec/maailman_koronatilastot_SQL">SQl-haut</a></p>
+								<p>Maailman koronatilastoissa nostan esiin tapaukset, kuolemat, rokotukset, rokotetut ja miten niiden trendit kehittyivät 2020-2023 välisenä ajanjaksona.</p>
 								
 								<span class="image main"><img src="images/Maailma_korona.png" alt="" /></span>
 								<p>Tuloksia maailman korona-analyysista:</p>
@@ -154,3 +156,4 @@
 	</body>
 
 </html>
+
