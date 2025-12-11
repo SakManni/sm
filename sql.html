@@ -72,20 +72,21 @@
 							
 								<p></p>
 								<p>Projekti koostuu kolmesta eri alaprojektista:</p>
-								<ul><li>Suomen koronatilastot 
-									<li>Euroopan koronatilastot 
-									<li>Maailman koronatilastot 
+								<ul><li>Suomen koronatilastot</li> 
+									<li>Euroopan koronatilastot</li> 
+									<li>Maailman koronatilastot</li>
+								</ul>
 								<p></p>
 								
-							<p>Projektin toteutuksessa käytetyt SQL-haut löytyvät <b><a href="https://github.com/SakManni/dataportfolio.git">Github-sivultani</a></b>.</p>
-							<p>Projektin lähtökohtana oli tutkia SQL:n avulla Our World In Data -sivuston (Coronavirus Pandemic (COVID-19) - Our World in Data) tarjoamaa dataa (csv-tiedosto) koronasta vuosien 2020 (tammikuu) - 2023 (syyskuu) ajalta. Sivustolla on mahdollista tarkastella dataa maailmanlaajuisesti, tai rajata sitä maanosien tai halutun kohdemaan mukaan, joista voi myös ladata itselleen tiedoston. Kaikki sivuston tarjoama data käsittää sivuston mukaan muun muassa</p>
+								<p>Projektin toteutuksessa käytetyt SQL-haut löytyvät <b><a href="https://github.com/SakManni/dataportfolio.git">Github-sivultani</a></b>.</p>
+								<p>Projektin lähtökohtana oli tutkia SQL:n avulla Our World In Data -sivuston (Coronavirus Pandemic (COVID-19) - Our World in Data) tarjoamaa dataa (csv-tiedosto) koronasta vuosien 2020 (tammikuu) - 2023 (syyskuu) ajalta. Sivustolla on mahdollista tarkastella dataa maailmanlaajuisesti, tai rajata sitä maanosien tai halutun kohdemaan mukaan, joista voi myös ladata itselleen tiedoston. Kaikki sivuston tarjoama data käsittää sivuston mukaan muun muassa</p>
 								
-							<p>1)	tapaukset: Kuinka monta uutta tapausta vahvistetaan päivittäin? Kuinka monta tapausta on vahvistettu pandemian alusta lähtien? Miten tapausten määrä muuttuu?</p>
-							<p>2)	Kuolemat: Kuinka monta COVID-19:ään liittyvää kuolemaa on raportoitu? Onko kuolemien määrä nouseva vai laskeva? Miten kuolleisuus vertautuu muihin maihin?</p>
-							<p>3)	Rokotukset: Kuinka monta rokoteannosta annetaan päivittäin? Kuinka monta annosta on annettu yhteensä? Mikä osuus väestöstä on rokotettu?</p>
-							<p>4)	Testaus: Kuinka paljon maat tekevät koronavirustestejä? Kuinka monta testiä maa tekee löytääkseen yhden COVID-19-tapauksen?</p>
+								<p>1)	tapaukset: Kuinka monta uutta tapausta vahvistetaan päivittäin? Kuinka monta tapausta on vahvistettu pandemian alusta lähtien? Miten tapausten määrä muuttuu?</p>
+								<p>2)	Kuolemat: Kuinka monta COVID-19:ään liittyvää kuolemaa on raportoitu? Onko kuolemien määrä nouseva vai laskeva? Miten kuolleisuus vertautuu muihin maihin?</p>
+								<p>3)	Rokotukset: Kuinka monta rokoteannosta annetaan päivittäin? Kuinka monta annosta on annettu yhteensä? Mikä osuus väestöstä on rokotettu?</p>
+								<p>4)	Testaus: Kuinka paljon maat tekevät koronavirustestejä? Kuinka monta testiä maa tekee löytääkseen yhden COVID-19-tapauksen?</p>
 								
-							<p>Projektin lähtökohtana oli tarkastella ensin maailmanlaajuisia tilastoja, joka kuitenkin laajeni kolmeksi eri alaprojektiksi. Maailman korona-datan lisäksi, käsittelen myös Suomen ja Euroopan korona-tilastoja. Tiedoston suuruuden takia (noin 344000 riviä) päätin tapauskohtaisesti lähtökohtaisesti rajata tiettyjä osa-alueita pois tarkastelusta ja keskittää analyysi kohtien 1-3 tarkasteluun.</p> 
+								<p>Projektin lähtökohtana oli tarkastella ensin maailmanlaajuisia tilastoja, joka kuitenkin laajeni kolmeksi eri alaprojektiksi. Maailman korona-datan lisäksi, käsittelen myös Suomen ja Euroopan korona-tilastoja. Tiedoston suuruuden takia (noin 344000 riviä) päätin tapauskohtaisesti lähtökohtaisesti rajata tiettyjä osa-alueita pois tarkastelusta ja keskittää analyysi kohtien 1-3 tarkasteluun.</p> 
 								
 								<p><b>Datan alustava muokkaaminen analyysia varten</b></p>
 								<p>Poistin ensin Excelissä lähdetiedostosta ylimääräisiä, analyysin kannalta tarpeettomia sarakkeita. Suodatin lisäksi Suomen ja Euroopan korona-analyysiä varten tiedostosta myös tarpeettomia rivejä (maita ja niihin liittyviä tietoja) pois. Lopuksi muokkasin tietosarakkeita oikeaan numeeriseen muotoon, kuten päivämääriä, tai tekstimuotoisia numeerista dataa sisältäviä sarakkeita. Koska kyseessä on SQL-projekti, jätin osan datan muokkauksesta sql-hakujen yhteyteen (null-arvojen huomiointi).
@@ -157,6 +158,7 @@
 	</body>
 
 </html>
+
 
 
 
